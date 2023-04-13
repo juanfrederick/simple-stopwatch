@@ -65,7 +65,7 @@ playBtn.addEventListener("click", function(){
             minute.textContent = minuteValue;
             hourValue =String(hourValueL)+String(hourValueR);
             hour.textContent = hourValue;
-        }, 1);
+        }, 1000);
     } else{
         clearInterval(timer);
         playBtn.textContent = "Play";
