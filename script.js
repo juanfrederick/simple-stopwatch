@@ -28,6 +28,8 @@ playBtn.addEventListener("click", function(){
     counter++;
 
     if(counter % 2 === 0){
+        playBtn.textContent = "Pause";
+        playBtn.style.backgroundColor = "khaki";
         timer = setInterval(() => {
 
             secondValueR++;
@@ -66,12 +68,16 @@ playBtn.addEventListener("click", function(){
         }, 1);
     } else{
         clearInterval(timer);
+        playBtn.textContent = "Play";
+        playBtn.style.backgroundColor = "aquamarine";
     }
 
 })
 
 restartBtn.addEventListener("click", function(){
     clearInterval(timer);
+    playBtn.textContent = "play";
+    playBtn.style.backgroundColor = "aquamarine";
     counter = 1;
     secondValue = "00";
     minuteValue = "00";
